@@ -1,0 +1,161 @@
+*{
+  margin: 0;
+  padding: 0;
+}
+/* header start  */
+.Head{
+  color: white;
+  background: black;
+}
+.Head img {
+  width: 90px;
+  height: 90px;
+  border-radius: 90%;
+}
+.Head input{
+  width:20vw;
+  height: 5vh;
+  text-align: center;
+  font-weight: bold;
+}
+.container_home{
+  
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: baseline;
+}
+.box {
+  width: 400px;
+  height: 800px;
+  margin: 1%;
+ 
+}
+
+.img {
+  width: 300px;
+  height: 300px;
+  padding: 38px;
+}
+.title {
+  background-color: rgb(189, 130, 245);
+  font-size: 23px;
+  font-style: italic;
+  padding: 1%;
+  margin: 2%;
+}
+.author{
+  display: flex;
+  flex-direction: column;
+  margin: 10px;
+}
+.author span{
+  padding: 2%;
+  background: orange;
+
+}
+.by{
+  background:red;
+}
+.author-de{
+  border-bottom : red
+}
+.button{
+  display: flex;
+
+}
+button{
+  outline: none;
+  border:none;
+  cursor: pointer;
+}
+.button i{
+  font-size: 25px;
+  margin: 20px 10px;
+
+}
+input{
+  width: 120px;
+  height:25px;
+  border: none;
+  margin: 20px;
+  border-bottom: 2px solid black;
+}
+.buttton .sendbtn{
+  width: 40px;
+  height: 10px;
+  font-size: 23px;
+}
+.container{
+  max-width: 90%;
+  margin: auto;
+}
+.flex{
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+}
+.padding{
+  padding: 10px 0;
+}
+
+/* navbar container */
+
+.nav_container{
+  background: black;
+  color: white;
+}
+.nav_container li{
+  margin-right: 30px;
+  transition: 0.5s;
+  list-style: none;
+  padding: 20px 0;
+}
+.nav_container li a {
+  margin-right: 30px;
+  transition: 0.5s;
+}
+.nav_container li:hover{
+  color:crimson;
+  cursor: pointer;
+}
+.baricon{
+  font-size: 25px;
+  display: none;
+}
+
+@media screen and (max-with:360px){
+  .head{
+    display: none;
+}
+.nav_container nav{
+  display: none;
+}
+.nav_container .flex{
+  display: none;
+}
+.baricon{
+  display: block;
+}
+}
+
+
+
+/* footer */
+
+
+.footer{
+  background: rgb(110, 110, 110);
+  color: white;
+  font-size: 30px;
+  justify-content: space-around;
+  padding: 1%;
+}
+.footer p{
+  border-bottom: 2px solid crimson;
+  padding: 1%;
+}
+.container_home{
+  border: 5px solid purple;
+ 
+}
+
