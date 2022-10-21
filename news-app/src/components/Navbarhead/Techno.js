@@ -10,19 +10,22 @@ import Comments from '../comment/Comments';
 // export const News = React.CreateContext()
 
 
-function Techno() {
+function Techno(props) {
 
   const [posts , setPosts] = useState([]);
   const[filterdata , setFilterdata] = useState([])
   const [search , setSearch] = useState("")
+  const[isLoading , setLoading] = useState(false)
 
 
   useEffect(()=> {
+    setLoading(true);
     axios.get(`https://newsapi.org/v2/everything?q=apple&from=2022-10-20&to=2022-10-20&sortBy=popularity&apiKey=7157a116d64c4fb4b809181db475711c`)
     .then((response)=> {
       setPosts([...response.data.articles]);
       setFilterdata([posts , ...response.data.articles])
-      // console.log(posts)
+      setLoading(false);
+      
     })
   } , [ ])
   
@@ -30,21 +33,20 @@ function Techno() {
   useEffect(()=> {
     const afterfilterdata = posts.filter((post) => {
 if(post.title){
-  // console.log("inside if")
-  // console.log(search , post.title.includes(search))
-  return post.title.includes(search);
+  return post.title.includes(props.searchKey);
 }
     })
-// console.log(afterfilterdata)
 setFilterdata(afterfilterdata)
-  },[search])
+  },[props.searchKey])
 
 
 
   return (
     <div className='container_home'>
-      
-      <input type="text" className="searchInput" placeholder='search here' value={search} onChange={(e)=> setSearch(e.target.value)}/>
+      {
+        isLoading ? (<p>loading</p>) : ("")
+       }
+
     {
       filterdata.map((post)=> <>
             <div className='box' key={Math.floor(Math.random()*10000)}>

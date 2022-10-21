@@ -1,3 +1,4 @@
+import {useState} from "react";
 import './App.css';
 import Homepage from "./components/Homepage/Homepage"
 import Header from './components/header/Header';
@@ -9,17 +10,19 @@ import Market from "./components/Navbarhead/Market"
 import { Route, Routes } from 'react-router-dom';
 
 function App() {
+
+  const [ searchKey , setSearchKey] = useState("")
+
   return (
     <> 
-   {/* <News.Provider value={posts}> */}
-      <Header />
-    {/* </News.Provider> */}
+   
+      <Header setSearchKey={setSearchKey} />
       <Navbarhead />
       <Routes>
-        <Route path="/" element={<Homepage />}/>
+        <Route path="/" element={<Homepage  searchKey={searchKey} />}/>
         <Route path="/contact" element={<Contact/>}/>
-        <Route path="/techno" element={<Techno/>}/>
-      <Route path="/Business" element={<Market/>}/>
+        <Route path="/techno" element={<Techno searchKey={searchKey}/>}/>
+      <Route path="/Business" element={<Market searchKey={searchKey}/>}/>
       </Routes>
       <Footer />
     </>
