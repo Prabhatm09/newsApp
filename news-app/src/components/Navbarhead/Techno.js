@@ -1,3 +1,4 @@
+
 import React, { useEffect, useState } from 'react'
 import axios from "axios"
 import "../../App.css"
@@ -9,7 +10,7 @@ import Comments from '../comment/Comments';
 // export const News = React.CreateContext()
 
 
-function Homepage(props) {
+function Techno() {
 
   const [posts , setPosts] = useState([]);
   const[filterdata , setFilterdata] = useState([])
@@ -17,13 +18,13 @@ function Homepage(props) {
 
 
   useEffect(()=> {
-    axios.get(`https://newsapi.org/v2/everything?q=apple&from=2022-10-18&to=2022-10-18&sortBy=popularity&apiKey=7157a116d64c4fb4b809181db475711c`)
+    axios.get(`https://newsapi.org/v2/everything?q=apple&from=2022-10-20&to=2022-10-20&sortBy=popularity&apiKey=7157a116d64c4fb4b809181db475711c`)
     .then((response)=> {
       setPosts([...response.data.articles]);
       setFilterdata([posts , ...response.data.articles])
       // console.log(posts)
     })
-  } , [])
+  } , [ ])
   
   
   useEffect(()=> {
@@ -65,5 +66,4 @@ setFilterdata(afterfilterdata)
     </div>
   )
 }
- 
-export default Homepage
+export default Techno

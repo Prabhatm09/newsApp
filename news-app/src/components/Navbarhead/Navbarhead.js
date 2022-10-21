@@ -1,5 +1,7 @@
 import React, { useState } from 'react'
 import "../../App.css"
+import { NavLink } from "react-router-dom"
+
 
 
 function Navbarhead() {
@@ -12,12 +14,10 @@ function Navbarhead() {
         <div className='nav_container' >
             <nav>
                 <ul className={navbar ? "navbar" : "flex"} onClick={() => setNavbar(false)}>
-                   <li>Home</li>
-                   <li>Contact</li>
-                   <li>sports</li>
-                    <li>tech</li>
-                   <li>market</li>
-                   <li>world</li>
+                   <li><NavLink to="/" >Home</NavLink></li>
+                   <li><NavLink to="/contact" >Contact</NavLink></li>
+                   <li><NavLink to ="/Techno">Techno</NavLink></li>
+                   <li><NavLink to="./Business">Market</NavLink></li>
                 </ul>
                 <div className="baricon" onClick={() => setNavbar(!navbar)}>
                     {navbar ? <i class="fa-solid fa-xmark"></i> :  <i class="fa-solid fa-bars"></i>}
