@@ -1,15 +1,24 @@
-import React from 'react'
+import React , { useState } from 'react'
 import "../../App.css"
 
 function Footer() {
- let showDate = new Date();
- let displayTime = showDate.getHours()+':'+showDate.getMinutes()+':'+showDate.getSeconds();
- let dt = showDate.toDateString()
+ let time = new Date().toLocaleTimeString();
+
+ const [ctime , setTime] = useState(time)
+
+ const updateTime = () => {
+   time =  new Date().toLocaleTimeString();
+  setTime(time);
+ }
+
+ setInterval(updateTime ,1000)
+
+
 
   return (
     <div className='flex footer'>
         <p>prabhat@1345gmail.com</p>
-        <p>{dt} - {displayTime}</p>
+        <p>{time}</p>
         
     </div>
   )
