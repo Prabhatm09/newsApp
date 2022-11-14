@@ -3,10 +3,7 @@ import axios from "axios"
 import "../../App.css"
 import Comments from '../comment/Comments';
 
-//  const searchFilter = React.createContext(posts);
-//  console.log(searchFilter)
 
-// export const News = React.CreateContext()
 
 
 function Homepage(props) {
@@ -22,7 +19,7 @@ function Homepage(props) {
     axios.get(`https://newsapi.org/v2/everything?q=apple&from=2022-10-18&to=2022-10-18&sortBy=popularity&apiKey=7157a116d64c4fb4b809181db475711c`)
     .then((response)=> {
       setPosts([...response.data.articles]);
-      setFilterdata([posts , ...response.data.articles])
+      setFilterdata(response.data.articles)
       // console.log(posts)
       setLoading(false)
     })
@@ -57,10 +54,11 @@ setFilterdata(afterfilterdata)
             </div>
             <div className='img_div'>
               <img className='img' src={post.urlToImage} alt="img" ></img>
+              <p>{post.urlToImage}</p>
             </div>
             <div className='author '>
               <span className='author-de'><span className='by'>By</span> <i class="fa-solid fa-arrow-right"></i> {post.author}</span>
-              <span className="description"><i class="fa-sharp fa-solid fa-quote-left"></i> {post.description} <i class="fa-sharp fa-solid fa-quote-right"></i></span>
+              <span className="description"><i class="fa-sharp fa-solid fa-quote-left"></i> {post.description}<i class="fa-sharp fa-solid fa-quote-right"></i></span>
             </div>
             <Comments/> 
             </div> 

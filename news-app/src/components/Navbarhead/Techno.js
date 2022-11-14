@@ -23,7 +23,7 @@ function Techno(props) {
     axios.get(`https://newsapi.org/v2/everything?q=apple&from=2022-10-20&to=2022-10-20&sortBy=popularity&apiKey=7157a116d64c4fb4b809181db475711c`)
     .then((response)=> {
       setPosts([...response.data.articles]);
-      setFilterdata([posts , ...response.data.articles])
+      setFilterdata(response.data.articles)
       setLoading(false);
       
     })
