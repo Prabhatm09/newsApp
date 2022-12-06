@@ -16,7 +16,7 @@ function Homepage(props) {
 
   useEffect(() => {
     setLoading(true);
-    axios.get(`https://newsapi.org/v2/everything?q=tesla&from=2022-11-05&sortBy=publishedAt&apiKey=7157a116d64c4fb4b809181db475711c`)
+    axios.get(`https://newsapi.org/v2/everything?q=apple&from=2022-12-05&to=2022-12-05&sortBy=popularity&apiKey=7157a116d64c4fb4b809181db475711c`)
       .then((response) => {
         setPosts([...response.data.articles]);
         setFilterdata(response.data.articles)

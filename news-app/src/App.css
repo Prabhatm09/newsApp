@@ -42,16 +42,17 @@
 }
 
 .box {
-  width: 400px;
+  border: 2px solid black;
+  width: fit-content;
   height: fit-content;
-  margin: 1%;
+  margin: 4%;
 
 }
 
 .img {
-  width: 300px;
+  width: 400px;
   height: 300px;
-  padding: 38px;
+  padding: 38px 250px;
 }
 
 .title {
