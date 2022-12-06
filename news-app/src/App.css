@@ -1,37 +1,51 @@
-*{
+* {
   margin: 0;
   padding: 0;
 }
+
 /* header start  */
-.Head{
+.Head {
   color: white;
   background: black;
 }
+
 .Head img {
   width: 90px;
   height: 90px;
   border-radius: 90%;
 }
-.Head input{
-  width:20vw;
+
+.Head input {
+  width: 20vw;
   height: 5vh;
   text-align: center;
   font-weight: bold;
 }
 
+.loader {
+  font-size: 40px;
+  font-weight: bold;
+  text-align: center;
+  letter-spacing: 1rem;
+  padding-top: 10%;
+  padding-left: 40%;
+  text-transform: capitalize;
+}
+
 /* Homepage css */
- 
-.container_home{
-  
+
+.container_home {
+
   display: flex;
   flex-wrap: wrap;
   justify-content: baseline;
 }
+
 .box {
   width: 400px;
   height: fit-content;
   margin: 1%;
- 
+
 }
 
 .img {
@@ -39,6 +53,7 @@
   height: 300px;
   padding: 38px;
 }
+
 .title {
   background-color: rgb(248, 36, 28);
   font-size: 23px;
@@ -46,144 +61,198 @@
   padding: 1%;
   margin: 2%;
 }
-.author{
+
+.author {
   display: flex;
   flex-direction: column;
   margin: 10px;
 }
-.author span{
+
+.author span {
   padding: 2%;
   background: orange;
 
 }
-.by{
-  background:red;
+
+.by {
+  background: red;
 }
-.author-de{
-  border-bottom : red
+
+.author-de {
+  border-bottom: red
 }
-.button{
+
+.button {
   display: flex;
 
 }
-button{
+
+button {
   outline: none;
-  border:none;
+  border: none;
   cursor: pointer;
 }
-.button i{
+
+.button i {
   font-size: 25px;
   margin: 20px 10px;
 
 }
-input{
+
+input {
   width: 120px;
-  height:25px;
+  height: 25px;
   border: none;
   margin: 20px;
   border-bottom: 2px solid black;
 }
 
-.searchInput{
+.searchInput {
   position: absolute;
   left: 71%;
   top: 3%;
-    width: 20vw;
-      height: 5vh;
-      text-align: center;
-      font-weight: bold;
+  width: 20vw;
+  height: 5vh;
+  text-align: center;
+  font-weight: bold;
 
 }
-.buttton .sendbtn{
+
+.buttton .sendbtn {
   width: 40px;
   height: 10px;
   font-size: 23px;
 }
-.container{
+
+.container {
   max-width: 90%;
   margin: auto;
 }
-.flex{
+
+.flex {
   display: flex;
   align-items: center;
   justify-content: space-between;
 }
-.padding{
+
+.padding {
   padding: 10px 0;
 }
 
 /* navbar container */
 
-.nav_container{
+.nav_container {
   background: black;
   color: white;
 }
-.nav_container ul li{
+
+.nav_container ul li {
   display: flex;
   justify-content: space-around;
 }
-.nav_container li{
+
+.nav_container li {
   margin: 0px 30px;
   font-size: 25px;
   transition: 0.5s;
   padding: 20px 0;
 }
-.nav_container li NavLink{
-  color:white;
+
+.nav_container li NavLink {
+  color: white;
 }
+
 .nav_container li a {
   margin-right: 30px;
   transition: 0.5s;
 }
-.nav_container li:hover{
+
+.nav_container li:hover {
   color: yellow;
   cursor: pointer;
 }
-.baricon{
+
+.baricon {
   font-size: 25px;
   display: none;
 }
 
+/* contact page */
+
+.sidebar_container {
+  margin: 50px;
+  display: flex;
+  justify-content: space-between;
+}
+
+.sidebar {
+
+  padding: 2%;
+}
+
+.whatsImg {
+  width: 20px;
+  height: 20px;
+}
+
+.para_container {
+  width: 300px;
+  height: fit-content;
+  background: lightcoral;
+  padding: 10px;
+}
+
 
 /* comments */
-.button{
+.button {
   display: flex;
   flex-direction: column;
 }
-.likebtn , .sendbtn{
+
+.likebtn,
+.sendbtn {
   background: white;
 }
-.likebtn:hover{
+
+.likebtn:hover {
   color: red;
 }
-.sendbtn:hover{
+
+.sendbtn:hover {
   color: blue;
 }
-.commensection{
+
+.commensection {
   margin-left: 20px;
 }
-.commensection input{
+
+.commensection input {
   text-align: center;
   font-size: 20px;
   width: 250px;
 }
-.commnets{
-  display:  flex;
+
+.commnets {
+  display: flex;
   justify-content: space-around;
-padding-left:20px;
+  padding-left: 20px;
 }
-.commnets img{
+
+.commnets img {
   width: 35px;
   height: 35px;
   border-radius: 50%;
 }
-.commnets .fa-trash{
-color: red;
+
+.commnets .fa-trash {
+  color: red;
 }
-.commnets button{
+
+.commnets button {
   background-color: none;
 }
-.input{
+
+.input {
   justify-content: space-around;
 }
 
@@ -192,7 +261,7 @@ color: red;
 /* footer */
 
 
-.footer{
+.footer {
   background: rgb(110, 110, 110);
   color: white;
   width: 100vw;
@@ -202,12 +271,8 @@ color: red;
   position: fixed;
   bottom: 0px;
 }
-.footer p{
+
+.footer p {
   border-bottom: 2px solid crimson;
   padding: 1%;
 }
-.container_home{
-  border: 5px solid purple;
- 
-}
-
