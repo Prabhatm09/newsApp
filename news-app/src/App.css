@@ -39,10 +39,10 @@
   display: flex;
   flex-wrap: wrap;
   justify-content: baseline;
+  margin-bottom: 10%;
 }
 
 .box {
-  border: 2px solid black;
   width: fit-content;
   height: fit-content;
   margin: 4%;
@@ -92,6 +92,7 @@ button {
   outline: none;
   border: none;
   cursor: pointer;
+  background-color: transparent;
 }
 
 .button i {

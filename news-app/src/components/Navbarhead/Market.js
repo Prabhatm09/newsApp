@@ -20,10 +20,10 @@ function Market(props) {
 
   useEffect(() => {
     setLoading(true);
-    axios.get(`https://newsapi.org/v2/top-headlines?country=us&category=business&apiKey=7157a116d64c4fb4b809181db475711c`)
+    axios.get(`market.json`)
       .then((response) => {
-        setPosts([...response.data.articles]);
-        setFilterdata(response.data.articles)
+        setPosts([...response.data]);
+        setFilterdata(response.data)
         setLoading(false);
         // console.log(posts)
       })

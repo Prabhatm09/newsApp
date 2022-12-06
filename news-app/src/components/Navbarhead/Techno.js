@@ -20,10 +20,10 @@ function Techno(props) {
 
   useEffect(() => {
     setLoading(true);
-    axios.get(`https://newsapi.org/v2/top-headlines?sources=techcrunch&apiKey=7157a116d64c4fb4b809181db475711c`)
+    axios.get(`techno.json`)
       .then((response) => {
-        setPosts([...response.data.articles]);
-        setFilterdata(response.data.articles)
+        setPosts([...response.data]);
+        setFilterdata(response.data)
         setLoading(false);
 
       })
