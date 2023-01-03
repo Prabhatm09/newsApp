@@ -2,12 +2,11 @@ import React , { useState } from 'react'
 import "../../App.css"
 
 function Footer() {
- let time = new Date().toLocaleTimeString();
+ let time = new Date().toLocaleString();
 
- const [ctime , setTime] = useState(time)
+ const [ctime , setTime] = useState()
 
  const updateTime = () => {
-   time =  new Date().toLocaleTimeString();
   setTime(time);
  }
 
